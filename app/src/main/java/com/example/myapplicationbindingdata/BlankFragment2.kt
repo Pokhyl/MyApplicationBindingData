@@ -23,7 +23,7 @@ class BlankFragment2 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         model = ViewModelProvider(requireActivity()).get(MyViewModel ::class.java)
-        binding.button.setOnClickListener{model.sendMessage("${binding.editText.text}")}
+        binding.button.setOnClickListener{model.sendMessage("${binding.editText.text}",requireContext())}
     }
 
 }
